@@ -16,8 +16,8 @@
     // スクリプトの設定
     "content_scripts": [
         {
-            "matches": ["https://weloveecomott.net/group/cbag/ag.cgi?page=ScheduleIndex"],  // 拡張機能を適用するURLパターン
-            "js": ["js/jquery-1.11.1.min.js", "js/sample.js"]                                      // JavaScriptのパス
+            "matches": ["https://b5due.cybozu.com/o/ag.cgi?page=ScheduleIndex"],  // 拡張機能を適用するURLパターン
+            "js": ["js/jquery-1.11.1.min.js", "js/my.js"]                                      // JavaScriptのパス
         },
         {
 	        "matches":["http://www.google.com/robots.txt*"],
