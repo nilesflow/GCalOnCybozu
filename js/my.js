@@ -1,13 +1,13 @@
  
 $(document).ready(function() {
 	$('.eventcell').each(function(){
-		$(this).html('aa');
+		$(this).html('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
 	});
 });
 
 var google = new OAuth2('google', { //今回はGoogleのAPIにアクセスするためgoogleを指定
     client_id: '',
-    client_secret: 'Client secret',
+    client_secret: '',
     api_scope: 'https://www.googleapis.com/auth/calendar' //スコープはGoogleカレンダー
 });
  
@@ -38,8 +38,8 @@ google.authorize(function() {
         }
     }
  
-    xhr.open('POST',
-        "https://www.googleapis.com/calendar/v3/calendars/"+ カレンダーのID +"/events",
+    xhr.open('GET',
+        "https://www.googleapis.com/calendar/v3/calendars/users/me/calendarList/",
         true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader('Authorization', 'Bearer ' + google.getAccessToken()); //アクセストークンの取得
